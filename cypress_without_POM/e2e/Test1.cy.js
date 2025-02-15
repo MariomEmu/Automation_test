@@ -29,23 +29,18 @@ describe('SignUpPage, productCategoryPage, productDetailPage and checkoutPage', 
 
         // Submit the form
         cy.get('[data-qa="create-account"]').click();
-
-        // Verify account creation
         cy.contains('Account Created', { timeout: 50000 }).should('be.visible');
 
 
         // Product Category
-        cy.visit('https://automationexercise.com'); // Go to the home page
+        cy.visit('https://automationexercise.com'); 
         cy.wait(3000);
-
-    
         cy.contains('Men', { timeout: 30000 }).should('be.visible').click({ force: true });
         cy.wait(2000);
-
-      
         cy.contains('Jeans', { timeout: 30000 }).should('be.visible').click({ force: true });
         cy.url().should('include', 'category_products'); 
         cy.contains('Men - Jeans', { timeout: 30000 }).should('be.visible');
+        
 
         // View and Update Product Detail
         cy.wait(3000);
