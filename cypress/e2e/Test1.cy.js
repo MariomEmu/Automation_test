@@ -23,7 +23,7 @@ describe('SignUpPage, productCategoryPage, productDetailPage and checkoutPage', 
         ProductDetailPage.changeProductQuantity('2');
         ProductDetailPage.addToCart();
 
-        // Checkout flow
+        // Checkout flow.
         CheckoutPage.visitCart();
         CheckoutPage.proceedToCheckout();
         CheckoutPage.fillPaymentDetails();
